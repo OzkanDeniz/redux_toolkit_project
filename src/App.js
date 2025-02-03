@@ -1,10 +1,12 @@
 import { Provider } from "react-redux";
-import Login from "./pages/Login";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
     <div>
-      <Provider>app</Provider>
+      <Provider>
+        <AppRouter/>
+      </Provider>
     </div>
   );
 }
