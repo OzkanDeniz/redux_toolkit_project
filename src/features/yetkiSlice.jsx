@@ -8,6 +8,7 @@ const yetkiSlice = createSlice({
   },
   reducer: {
     kullaniciOlustur: (state,action) => {
+      state.email = action.payload.email
 
     },
     kullaniciSil: () => {
