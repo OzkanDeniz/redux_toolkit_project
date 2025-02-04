@@ -11,10 +11,10 @@ const yetkiSlice = createSlice({
 
     },
     kullaniciSil: () => {
-
+        
     },
   },
 });
 
-export const {kullaniciOlustur,kullaniciSil}=yetkiSlice.actions
-export default yetkiSlice.reducer
+export const { kullaniciOlustur, kullaniciSil } = yetkiSlice.actions;
+export default yetkiSlice.reducer;
