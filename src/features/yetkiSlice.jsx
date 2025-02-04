@@ -16,4 +16,5 @@ const yetkiSlice = createSlice({
   },
 });
 
+export const {kullaniciOlustur,kullaniciSil}=yetkiSlice.actions
 export default yetkiSlice.reducer
