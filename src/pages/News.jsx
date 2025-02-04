@@ -10,7 +10,9 @@ import {
 
 const News = () => {
   return (
+  
     <>
+    dada
       <Box
         xs={{ d: "flex" }}
         display="flex"
