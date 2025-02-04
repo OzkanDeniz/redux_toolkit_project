@@ -14,7 +14,9 @@ const Login = () => {
 
   let {email, password}=useSelector((state)=>state.yetkiSlice)
 
-
+const handleSubmit=(e)=>{
+e.preventDefault()
+}
 
   return (
     <Container component="main" maxWidth="xs">
