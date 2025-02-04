@@ -7,11 +7,11 @@ const yetkiSlice = createSlice({
     password: "",
   },
   reducer: {
-    kullaniciOlustur: () => {
+    kullaniciOlustur: (state,action) => {
 
     },
     kullaniciSil: () => {
-        
+
     },
   },
 });
