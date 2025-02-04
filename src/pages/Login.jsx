@@ -8,15 +8,19 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { kullaniciOlustur } from "../features/yetkiSlice";
 
 const Login = () => {
+  let { email, password } = useSelector((state) => state.yetkiSlice);
 
-  let {email, password}=useSelector((state)=>state.yetkiSlice)
+  const dispatch = useDispatch();
 
-const handleSubmit=(e)=>{
-e.preventDefault()
-}
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    dispatch.kullaniciOlustur();
+  };
 
   return (
     <Container component="main" maxWidth="xs">
@@ -49,7 +53,7 @@ e.preventDefault()
             name="email"
             autoComplete="email"
             autoFocus
-            onChange={(e)=>(email=e.target.value)}
+            onChange={(e) => (email = e.target.value)}
           />
           <TextField
             margin="normal"
@@ -59,7 +63,7 @@ e.preventDefault()
             label="Password"
             type="password"
             id="password"
-            onChange={(e)=>(password=e.target.value)}
+            onChange={(e) => (password = e.target.value)}
           />
 
           <Button
@@ -68,7 +72,6 @@ e.preventDefault()
             variant="contained"
             color="secondary"
             sx={{ mt: 3, mb: 2 }}
-            
           >
             Sign In
           </Button>
