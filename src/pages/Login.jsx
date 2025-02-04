@@ -10,16 +10,22 @@ import {
 } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { kullaniciOlustur } from "../features/yetkiSlice";
+import { useNavigate } from "react-router-dom";
+import News from "./News";
 
 const Login = () => {
   let { email, password } = useSelector((state) => state.yetkiSlice);
 
+  const navigate = useNavigate();
+  
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     dispatch(kullaniciOlustur({ email, password }));
+
+    navigate("/");
   };
 
   return (
