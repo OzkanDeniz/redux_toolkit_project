@@ -6,9 +6,8 @@ const yetkiSlice = createSlice({
     email: "",
     password: "",
   },
-  reducer:{
-    kullaniciOlustur:()=>{
-        
-    }
-  }
+  reducer: {
+    kullaniciOlustur: () => {},
+    kullaniciSil: () => {},
+  },
 });
