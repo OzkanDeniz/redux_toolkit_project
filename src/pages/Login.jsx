@@ -8,8 +8,14 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import { useSelector } from "react-redux";
 
 const Login = () => {
+
+  let {email, password}=useSelector((state)=>state.yetkiSlice)
+
+
+
   return (
     <Container component="main" maxWidth="xs">
       <Box
