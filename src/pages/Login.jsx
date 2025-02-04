@@ -19,7 +19,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    dispatch(kullaniciOlustur());
+    dispatch(kullaniciOlustur({ email, password }));
   };
 
   return (
