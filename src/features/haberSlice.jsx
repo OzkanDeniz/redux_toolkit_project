@@ -18,9 +18,12 @@ export const haberSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(getData.pending, (state) => {})
+      .addCase(getData.pending, (state) => {
+        state.loading = true
+      })
       .addCase(getData.fulfilled, (state, action) => {
         state.haberler = action.payload
+        state.loading = false
       });
   },
 });
