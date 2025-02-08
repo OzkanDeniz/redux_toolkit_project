@@ -7,11 +7,20 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const News = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getData());
+  },[]);
+
+  const { haberler } = useSelector((state) => state.haberSlice);
+
   return (
     <>
-      dada
       <Box
         xs={{ d: "flex" }}
         display="flex"
