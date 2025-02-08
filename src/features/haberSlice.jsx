@@ -16,4 +16,5 @@ export const haberSlice = createSlice({
   }
 });
 
+export const {} = haberSlice.actions
 export default haberSlice.reducer
