@@ -6,4 +6,7 @@ export const haberSlice = createSlice({
     haberler: [],
     loading: true,
   },
+  reducers:{
+    
+  }
 });
