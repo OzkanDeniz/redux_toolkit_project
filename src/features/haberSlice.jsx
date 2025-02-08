@@ -8,7 +8,10 @@ export const haberSlice = createSlice({
   },
   reducers:{
     clearHaber:()=>{
-        
+
     }
+  },
+  extraReducers:()=>{
+    
   }
 });
