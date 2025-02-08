@@ -16,7 +16,9 @@ export const haberSlice = createSlice({
   reducers: {
     clearHaber: () => {},
   },
-  extraReducers: (builder) => {},
+  extraReducers: (builder) => {
+    builder.addCase()
+  },
 });
 
 export const { clearHaber } = haberSlice.actions;
