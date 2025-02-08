@@ -11,7 +11,10 @@ const yetkiSlice = createSlice({
       state.email = action.payload.email;
       state.password = action.payload.password;
     },
-    kullaniciSil: () => {},
+    kullaniciSil: (state) => {
+      state.email=""
+      state.password=""
+    },
   },
 });
 

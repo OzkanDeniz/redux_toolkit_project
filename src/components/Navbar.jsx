@@ -1,7 +1,15 @@
 import React from "react";
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { kullaniciSil } from "../features/yetkiSlice";
 
 const Navbar = () => {
+  const { email } = useSelector((state) => state.yetkiSlice);
+  const dispatch = useDispatch();
+
+  const signOut = () => {
+    dispatch(kullaniciSil());
+  };
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="secondary">
@@ -14,7 +22,15 @@ const Navbar = () => {
             Clarusway News
           </Typography>
 
-          <Button color="inherit">LogIn</Button>
+          {email ? (
+            <Button color="inherit" onClick={signOut}>
+              Logout
+            </Button>
+          ) : (
+            <Button color="inherit" onClick={signOut}>
+              Login
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
     </Box>
