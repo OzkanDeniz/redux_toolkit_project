@@ -33,10 +33,10 @@ const News = () => {
             <CardMedia component="img" image={a.urlToImage} height="250" />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                {}
+                {a.title}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                {}
+                {a.content}
               </Typography>
             </CardContent>
             <CardActions>
