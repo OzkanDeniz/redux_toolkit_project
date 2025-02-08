@@ -9,15 +9,15 @@ import {
 } from "@mui/material";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { getData } from "../features/haberSlice";
 
 const News = () => {
   const dispatch = useDispatch();
+  const { haberler } = useSelector((state) => state.haberSlice);
 
   useEffect(() => {
     dispatch(getData());
-  },[]);
-
-  const { haberler } = useSelector((state) => state.haberSlice);
+  }, [dispatch]);
 
   return (
     <>
@@ -28,7 +28,7 @@ const News = () => {
         justifyContent="space-evenly"
         flexWrap="wrap"
       >
-        {[].map((a, index) => (
+        {haberler.map((a, index) => (
           <Card key={index} sx={{ maxWidth: 345, maxHeight: 600, m: 5 }}>
             <CardMedia component="img" image={a.urlToImage} height="250" />
             <CardContent>
