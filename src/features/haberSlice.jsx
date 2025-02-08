@@ -17,7 +17,7 @@ export const haberSlice = createSlice({
     clearHaber: () => {},
   },
   extraReducers: (builder) => {
-    builder.addCase(getData.pending, (state)=>{}).addCase(getData.fulfilled, (state)=>{})
+    builder.addCase(getData.pending, (state)=>{}).addCase(getData.fulfilled, (state,action)=>{})
   },
 });
 
