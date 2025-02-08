@@ -12,6 +12,8 @@ export const haberSlice = createSlice({
     }
   },
   extraReducers:()=>{
-    
+
   }
 });
+
+export default haberSlice.reducer
